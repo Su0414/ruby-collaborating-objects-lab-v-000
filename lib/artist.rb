@@ -16,6 +16,7 @@ class Artist
   end 
   
   def songs 
+<<<<<<< HEAD
     if(@songs == [])
       return " " 
     else 
@@ -24,6 +25,12 @@ class Artist
   end 
   
   def self.all 
+=======
+    @songs
+  end 
+  
+  def self.all  
+>>>>>>> 42e66a69eb5e6037150ddb950defd557c60410a2
     @@all
   end 
   
@@ -33,11 +40,20 @@ class Artist
   
   def add_song(song)
       @songs << song
+<<<<<<< HEAD
+=======
+      #song.artist = self
+>>>>>>> 42e66a69eb5e6037150ddb950defd557c60410a2
   end 
   
    def self.create_by_name(artist_name)
     new_artist = self.new(artist_name)
     new_artist.save 
+<<<<<<< HEAD
+=======
+    puts "Artist:create_by_name : #{new_artist}"
+    binding.pry
+>>>>>>> 42e66a69eb5e6037150ddb950defd557c60410a2
     new_artist.name = artist_name
     new_artist
   end 
